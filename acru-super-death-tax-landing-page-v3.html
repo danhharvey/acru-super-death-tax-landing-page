@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Free Super Death Tax Check | ACru Wealth Financial Advisory</title>
+  <meta name="description" content="Find out how much tax may apply to the taxable component of your super if it passes to adult beneficiaries." />
+  <style>
+    :root {
+      --green:#31483f; --sage:#7B9284; --sage-dark:#6a7f73; --soft:#edf2ee; --cream:#f8f4eb;
+      --sand:#eee6d8; --gold:#b38d57; --ink:#172622; --muted:#53615b; --white:#fffdf7;
+      --line:rgba(123,146,132,.32); --shadow:0 26px 68px rgba(49,72,63,.14);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:"Avenir Next",Avenir,Montserrat,"Segoe UI",Arial,sans-serif}
+    a{color:inherit}
+    .wrap{width:min(1160px,calc(100% - 44px));margin:0 auto}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:999px;background:linear-gradient(135deg,var(--sage),var(--green));color:white;text-decoration:none;font-weight:900;padding:17px 28px;box-shadow:0 16px 38px rgba(49,72,63,.2);cursor:pointer;transition:.2s ease;text-transform:uppercase;letter-spacing:.03em}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.alt{background:rgba(255,255,255,.75);color:var(--green);border:1px solid var(--line);box-shadow:none}
+    .logo{width:172px;height:auto;display:block}
+    .brand-lockup{display:flex;align-items:center;gap:15px}
+    .brand-mark{width:54px;height:66px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto}
+    .brand-mark svg{display:block;width:100%;height:100%}
+    .brand-text strong{display:block;color:#303735;font-size:18px;line-height:1;text-transform:uppercase;letter-spacing:.14em;font-weight:500}
+    .brand-text span{display:block;margin-top:6px;color:#59615d;font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.16em}
+    header{display:flex;align-items:center;justify-content:space-between;padding:30px 0 28px}
+    section{padding:68px 0}
+    .hero{position:relative;overflow:hidden;padding-top:0;background:linear-gradient(90deg,#fbf7ef 0%,#f5efe4 56%,#e8decd 100%)}
+    .hero:before{content:"";position:absolute;left:-8%;right:-8%;bottom:-78px;height:155px;background:var(--green);border-radius:50% 50% 0 0/78% 78% 0 0;z-index:1}
+    .hero .wrap{position:relative;z-index:2}
+    .hero-content{display:grid;grid-template-columns:1.02fr .98fr;gap:44px;align-items:center;padding:6px 0 82px}
+    h1{margin:22px 0 0;color:var(--green);font-size:clamp(52px,7.4vw,92px);line-height:.96;letter-spacing:-.04em;font-weight:950}
+    h1 span{display:block;color:var(--sage-dark)}
+    .lead{max-width:620px;margin:25px 0 0;font-size:clamp(21px,2.1vw,30px);line-height:1.28;color:#273833}
+    .actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+    .hero-visual{position:relative;min-height:560px;border-radius:180px 0 0 0;background:linear-gradient(180deg,rgba(248,244,235,.08),rgba(49,72,63,.16)),url("assets/retiree-family-beach-hero.png") 68% center/auto 100% no-repeat;background-color:#e8decd;box-shadow:var(--shadow);overflow:hidden}
+    .hero-visual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(248,244,235,.55),rgba(248,244,235,0) 44%,rgba(49,72,63,.08))}
+    .hero-card{position:absolute;left:30px;right:76px;bottom:34px;border-radius:34px;background:rgba(255,253,247,.92);border:1px solid rgba(123,146,132,.28);box-shadow:0 24px 52px rgba(49,72,63,.18);padding:26px 28px;z-index:2}
+    .hero-card h3{margin:0;color:var(--green);font-size:30px;line-height:1.05;text-transform:uppercase}
+    .hero-card p{font-size:17px;color:var(--muted);margin-bottom:0}
+    .hero-card .big-percent{display:block;margin:18px 0 6px;color:var(--green);font-size:clamp(48px,5.8vw,78px);font-weight:950;line-height:.9;letter-spacing:-.04em}
+    .grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:46px;align-items:center}
+    .eyebrow{margin:0 0 12px;color:var(--sage);font-weight:950;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+    h2{margin:0;color:var(--green);font-size:clamp(35px,4vw,56px);line-height:1.04;letter-spacing:-.04em}
+    p{line-height:1.62}
+    .copy{font-size:18px;color:var(--muted)}
+    .panel{border-radius:42px;background:#fffdf7;border:1px solid rgba(123,146,132,.24);box-shadow:var(--shadow);padding:38px}
+    .calc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start}
+    label span{display:block;margin-bottom:8px;font-size:18px;font-weight:900;color:var(--ink);line-height:1.2}
+    .money{display:flex;align-items:center;border:1px solid var(--line);border-radius:22px;background:var(--cream);padding:0 18px}
+    .money b{margin-right:8px;color:var(--sage)}
+    .money input{width:100%;border:0;background:transparent;padding:18px 0;font-size:28px;font-weight:900;color:var(--ink);outline:0}
+    .inputs{display:grid;gap:18px;margin-top:18px}
+    .info-card{border:1px solid rgba(123,146,132,.26);border-radius:22px;background:#f8f4eb;padding:15px 16px;margin-top:14px}
+    .info-card strong{display:block;color:var(--green);font-size:15px;margin-bottom:7px}
+    .info-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+    .calculator-section{position:relative;background:linear-gradient(180deg,var(--cream),#fffdf7)}
+    .brand-strip{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:22px;border:1px solid rgba(123,146,132,.26);border-radius:26px;background:#fffefa;padding:18px 20px;box-shadow:0 10px 28px rgba(49,72,63,.06)}
+    .brand-strip p{margin:0;color:#44564f;font-size:15px;line-height:1.45}
+    .brand-strip .brand-text strong{font-size:16px}
+    .slider-card{border:1px solid rgba(123,146,132,.26);border-radius:32px;background:linear-gradient(180deg,#fffdf7 0%,var(--soft) 100%);padding:28px}
+    .slider-head{display:grid;grid-template-columns:1fr minmax(190px,220px);align-items:start;gap:24px;margin-bottom:26px}
+    .slider-head span{margin:0}
+    .slider-head .fine{font-size:14px;line-height:1.45;font-weight:850;color:#53615b}
+    .slider-value{min-width:190px}
+    input[type="range"]{-webkit-appearance:none;appearance:none;width:100%;height:38px;background:transparent;cursor:pointer}
+    input[type="range"]::-webkit-slider-runnable-track{height:14px;border-radius:999px;background:linear-gradient(90deg,var(--green) var(--fill,25%),#dfe7e1 var(--fill,25%))}
+    input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;border-radius:50%;background:var(--green);border:0;box-shadow:0 0 0 6px #fffdf7,0 8px 20px rgba(49,72,63,.22);margin-top:-7px}
+    input[type="range"]::-moz-range-track{height:14px;border-radius:999px;background:#dfe7e1}
+    input[type="range"]::-moz-range-progress{height:14px;border-radius:999px;background:var(--green)}
+    input[type="range"]::-moz-range-thumb{width:28px;height:28px;border-radius:50%;background:var(--green);border:6px solid #fffdf7;box-shadow:0 8px 20px rgba(49,72,63,.22)}
+    .range-row{display:grid;gap:8px}
+    .range-meta{display:flex;justify-content:space-between;color:#6b746f;font-size:12px;font-weight:800}
+    .preset-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .chip{border:1px solid var(--line);background:#fffefa;color:var(--green);border-radius:999px;min-width:74px;padding:12px 16px;font-weight:900;font-size:15px;cursor:pointer;box-shadow:0 6px 14px rgba(49,72,63,.06)}
+    .chip:hover{background:var(--green);color:white}
+    .toggle-card{display:grid;grid-template-columns:1fr auto;align-items:center;gap:18px;border:1px solid rgba(123,146,132,.26);border-radius:24px;background:#fffdf7;margin-top:24px;padding:20px}
+    .toggle-copy strong{display:block;color:var(--green);font-size:17px;text-transform:uppercase}
+    .toggle-copy span{display:block;color:var(--muted);font-size:13px;line-height:1.42;margin-top:6px}
+    .switch{position:relative;display:block;width:58px;height:32px;flex:0 0 auto;align-self:center}
+    .switch input{position:absolute;opacity:0;pointer-events:none}
+    .switch span{position:absolute;inset:0;border-radius:999px;background:#dfe7e1;border:1px solid var(--line);cursor:pointer;transition:.2s ease}
+    .switch span:before{content:"";position:absolute;width:24px;height:24px;left:3px;top:50%;border-radius:50%;background:#fffdf7;box-shadow:0 4px 12px rgba(49,72,63,.18);transform:translateY(-50%);transition:.2s ease}
+    .switch input:checked + span{background:var(--green)}
+    .switch input:checked + span:before{transform:translate(26px,-50%)}
+    .tax-mode{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+    .rate-option{border:1px solid var(--line);background:#fffefa;border-radius:18px;padding:14px;cursor:pointer}
+    .rate-option input{position:absolute;opacity:0;pointer-events:none}
+    .rate-option strong{display:block;color:var(--green);font-size:20px}
+    .rate-option span{display:block;margin-top:4px;color:var(--muted);font-size:12px;line-height:1.35}
+    .rate-option:has(input:checked){border-color:var(--green);background:var(--blue);box-shadow:inset 0 0 0 2px rgba(49,72,63,.08)}
+    .result-main{border-radius:34px;background:var(--green);padding:34px;color:white;min-height:390px;display:flex;flex-direction:column;justify-content:center}
+    .result-main .amount{font-size:clamp(70px,8vw,116px);font-weight:950;line-height:.88;letter-spacing:-.055em;margin-top:14px;color:#f5ecdc}
+    .result-main p{color:rgba(255,255,255,.84);margin-bottom:0}
+    .result-kicker{font-size:clamp(23px,2.4vw,34px);line-height:1.1;font-weight:950;color:#fffdf7;margin-top:20px}
+    .impact-bar{margin-top:18px;border-radius:999px;height:13px;background:rgba(255,255,255,.22);overflow:hidden}
+    .impact-fill{height:100%;width:0;background:var(--gold);border-radius:999px;transition:width .25s ease}
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+    .mini{border:1px solid rgba(123,146,132,.24);border-radius:24px;background:white;padding:18px}
+    .mini .label{font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:950;color:var(--sage)}
+    .mini .num{font-size:29px;margin-top:8px;color:var(--green);font-weight:950}
+    .fine{font-size:12px;color:#68716c;line-height:1.55}
+    .advice-value{padding:28px 0 12px;background:#fffdf7}
+    .value-box{display:grid;grid-template-columns:.95fr 1.05fr;gap:34px;align-items:center;border-radius:38px;background:linear-gradient(135deg,#f8f4eb,#edf2ee);border:1px solid rgba(123,146,132,.26);box-shadow:0 16px 42px rgba(49,72,63,.08);padding:34px}
+    .value-box h2{font-size:clamp(34px,4vw,54px)}
+    .value-amount{color:var(--green);font-size:clamp(64px,8vw,112px);font-weight:950;line-height:.9;letter-spacing:-.055em}
+    .value-copy{font-size:19px;color:#30413b;line-height:1.5;margin:18px 0 0}
+    .value-note{margin-top:18px;color:#607068;font-size:13px;line-height:1.5}
+    .contact{padding-top:28px;padding-bottom:88px}
+    .contact-box{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;border-radius:42px;background:linear-gradient(135deg,var(--green),#5f786b);padding:42px;box-shadow:0 18px 50px rgba(49,72,63,.16);color:white}
+    .contact-box h2,.contact-box .eyebrow{color:#fffdf7}
+    .contact-box .copy{color:rgba(255,255,255,.82)}
+    .callouts{display:grid;gap:12px;margin-top:24px}
+    .callout{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.09);border-radius:22px;padding:16px;color:rgba(255,255,255,.82)}
+    .callout strong{display:block;color:#fffdf7;margin-bottom:3px}
+    form{border-radius:34px;background:#fffefa;padding:28px;box-shadow:0 18px 44px rgba(49,72,63,.1)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+    .full{grid-column:1/-1}
+    .field{width:100%;border:1px solid var(--line);border-radius:18px;background:var(--cream);padding:14px 15px;font-size:16px;color:var(--ink);outline:0}
+    .pac-container{z-index:9999;border-radius:16px;border:1px solid rgba(123,146,132,.3);box-shadow:0 14px 34px rgba(49,72,63,.16);font-family:"Avenir Next",Avenir,Montserrat,"Segoe UI",Arial,sans-serif}
+    textarea.field{min-height:108px;resize:vertical}
+    .qualifier{display:none;border:1px solid rgba(123,146,132,.3);border-radius:22px;background:var(--soft);padding:16px}
+    .qualifier.show{display:block}
+    .choice-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+    .choice{position:relative;display:block;border:1px solid var(--line);border-radius:18px;background:#fffdf7;padding:13px 14px;cursor:pointer;font-weight:900;color:var(--green)}
+    .choice input{position:absolute;opacity:0;pointer-events:none}
+    .choice:has(input:checked){background:var(--green);color:white;border-color:var(--green)}
+    .eligibility-message{display:none;border-radius:18px;padding:14px 15px;font-size:14px;line-height:1.45}
+    .eligibility-message.show{display:block}
+    .eligibility-message.warn{background:#fde8e8;border:2px solid #c62828;color:#7f1d1d;font-weight:850}
+    .eligibility-message.ok{background:#edf2ee;border:1px solid rgba(123,146,132,.32);color:var(--green)}
+    .submission-success{min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center}
+    .success-panel{width:100%;border-radius:30px;background:linear-gradient(180deg,#fffdf7 0%,#edf2ee 100%);border:1px solid rgba(123,146,132,.28);padding:46px 34px;box-shadow:0 18px 44px rgba(49,72,63,.08)}
+    .success-icon{width:82px;height:82px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:#fffdf7;font-size:48px;font-weight:950;line-height:1;margin-bottom:22px;box-shadow:0 16px 34px rgba(49,72,63,.22)}
+    .success-panel h3{margin:0;color:var(--green);font-size:clamp(38px,4.8vw,64px);line-height:1;letter-spacing:-.04em}
+    .success-panel p{margin:18px auto 0;max-width:560px;color:#31433d;font-size:19px;line-height:1.48}
+    .success-panel .status-note{margin-top:24px;border-radius:20px;background:#fffdf7;border:1px solid rgba(123,146,132,.26);padding:18px;color:#4f5d58;font-size:15px;line-height:1.5}
+    .success-panel .status-note.warn{background:#fde8e8;border:2px solid #c62828;color:#7f1d1d;font-weight:850}
+    .site-footer{padding:0 0 44px;background:var(--cream)}
+    .footer-box{display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid rgba(123,146,132,.28);padding-top:24px;color:#52625c}
+    .footer-box p{margin:0;font-size:13px;line-height:1.5}
+    .footer-note{text-align:right;max-width:460px}
+    .disclaimer{border-top:1px solid var(--line);margin-top:20px;padding-top:16px}
+    #calculator .disclaimer{max-width:100%;margin-bottom:0;color:#68716c}
+    .sticky{display:none}
+    @media (max-width:900px){
+      header .btn{display:none}
+      .hero-content,.grid,.calc-grid,.contact-box{grid-template-columns:1fr}
+      .value-box{grid-template-columns:1fr;padding:26px;border-radius:30px}
+      .hero:before{height:112px;bottom:-58px}
+      .hero-visual{min-height:500px;border-radius:120px 0 0 0}
+      .hero-visual{background-size:auto 100%;background-position:66% center}
+      .hero-card{padding:24px;left:18px;right:18px;bottom:18px}
+      .mini-grid,.form-grid,.tax-mode{grid-template-columns:1fr}
+      .result-main{min-height:0}
+      .slider-head{display:grid}
+      .slider-value{min-width:0}
+      .toggle-card{align-items:center}
+      .panel,.contact-box{padding:24px;border-radius:32px}
+      .brand-strip,.footer-box{align-items:flex-start;flex-direction:column}
+      .footer-note{text-align:left}
+      section{padding:58px 0}
+      .sticky{position:fixed;display:flex;left:14px;right:14px;bottom:14px;z-index:20}
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" id="top">
+      <div class="wrap">
+        <header>
+          <img class="logo" src="data:image/png;base64,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" alt="ACru Wealth Financial Advisory logo">
+          <a class="btn" href="#calculator">Check your super now</a>
+        </header>
+        <div class="hero-content">
+          <div>
+            <h1>Australia doesn’t have death tax. <span>Except inside super.</span></h1>
+            <p class="lead">Enter the taxable component of your super and see the potential tax impact for your family. No sugar-coating, no scare tactics. Just the number.</p>
+            <div class="actions">
+              <a class="btn" href="#calculator">Check your super now</a>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="A calm retirement lifestyle image">
+            <div class="hero-card">
+              <h3>A potential death tax impact</h3>
+              <span class="big-percent">Up to 17%</span>
+              <p>of the taxable component within your superannuation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="calculator" class="calculator-section">
+      <div class="wrap">
+        <div class="panel">
+          <div class="calc-grid">
+            <div>
+              <p class="eyebrow">100% free · no obligation</p>
+              <h2>What’s your taxable component?</h2>
+              <p class="copy">Move the slider or click the dollar figure to enter your own amount. The result shows the estimated death tax at 15%, or 17% if a testamentary trust will applies.</p>
+              <div class="inputs">
+                <div class="slider-card">
+                  <label class="slider-head">
+                    <span>
+                      <span>Taxable component of super</span>
+                      <small class="fine">This is the part generally used for the death tax estimate.</small>
+                    </span>
+                    <div class="money slider-value"><b>$</b><input id="taxable" inputmode="numeric" value="250000" aria-label="Taxable component of super"></div>
+                  </label>
+                  <div class="range-row">
+                    <input id="taxableRange" type="range" min="0" max="1000000" step="5000" value="250000" aria-label="Adjust taxable component of super">
+                    <div class="range-meta"><span>$0</span><span>$1m</span></div>
+                  </div>
+                  <div class="preset-row" aria-label="Common taxable component examples">
+                    <button class="chip" type="button" data-taxable="100000">$100k</button>
+                    <button class="chip" type="button" data-taxable="250000">$250k</button>
+                    <button class="chip" type="button" data-taxable="500000">$500k</button>
+                    <button class="chip" type="button" data-taxable="1000000">$1m</button>
+                  </div>
+                  <div class="toggle-card">
+                    <div class="toggle-copy">
+                      <strong>TESTAMENTARY TRUST WILL?</strong>
+                      <span>Do you have a testamentary trust will? If so, the death tax estimate changes to 17% rather than 15%, so this toggle updates the calculation.</span>
+                    </div>
+                    <label class="switch" aria-label="Use 17 percent testamentary trust estimate">
+                      <input id="trustToggle" type="checkbox">
+                      <span></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="result-main">
+                <div class="eyebrow" style="color:rgba(255,255,255,.72);margin:0">Potential tax impact</div>
+                <div class="amount" id="mainTax">$37,500</div>
+                <div class="result-kicker">could be lost to tax before your family receives it.</div>
+                <p id="mainTaxCopy">Estimated at 15% of the taxable component entered.</p>
+                <div class="impact-bar" aria-hidden="true"><div class="impact-fill" id="impactFill"></div></div>
+              </div>
+              <div class="mini" style="margin-top:14px;background:#f7f5ee"><div class="label">The plain-English version</div><p class="fine" style="font-size:14px;margin-bottom:0">If this is paid to adult non-tax dependant beneficiaries, this is the kind of number that may not make it to your kids. With a testamentary trust will, the estimate can be higher. There may be strategies to reduce or clean up the taxable component, but it needs to be reviewed before it becomes a problem.</p></div>
+              <div class="info-card">
+                <strong>Where do I find my taxable component?</strong>
+                <p>Your super is usually split into a taxable component and a tax-free component. Check your latest annual super statement or contact your super fund and ask what your taxable component is. If you have money sitting in the taxable component, that is the number to enter in the calculator.</p>
+              </div>
+              <p class="fine disclaimer">This calculator is a simple education estimate only. Actual tax can depend on the recipient, payment pathway, taxable taxed and untaxed elements, testamentary trust use, estate planning, super fund rules and legislation at the time.</p>
+            </div>
+          </div>
+        </div>
+        <div class="brand-strip">
+          <div class="brand-lockup">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 86 110" role="img" focusable="false">
+                <path d="M27 6V67C27 82 35 90 45 91" fill="none" stroke="#7B9284" stroke-width="7" stroke-linecap="square"/>
+                <path d="M60 6V67C60 92 47 104 25 104" fill="none" stroke="#7B9284" stroke-width="7" stroke-linecap="square"/>
+              </svg>
+            </span>
+            <div class="brand-text">
+              <strong>ACRU WEALTH</strong>
+              <span>Financial Advisory</span>
+            </div>
+          </div>
+          <p>Friendly, clean advice around super, tax strategy and what may be worth fixing before it becomes a family problem.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="advice-value">
+      <div class="wrap">
+        <div class="value-box">
+          <div>
+            <p class="eyebrow">The value of good advice</p>
+            <h2>With the right strategy, this can be cleaned up.</h2>
+            <p class="value-copy">If you have the available full non-concessional caps and the strategy is right for you, ACru Wealth may be able to help reduce the death tax your kids would otherwise pay.</p>
+          </div>
+          <div>
+            <div class="value-amount" id="cleanAmount">$37,500</div>
+            <p class="value-copy" id="cleanCopy">Potential death tax savings this financial year, based on the figure entered above.</p>
+            <p class="value-note" id="cleanNote">This is capped at $58,500 at 15%, subject to available caps, eligibility, timing and strategy suitability. Get in touch below and we can help you understand what may apply to your situation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <div class="contact-box">
+          <div>
+            <p class="eyebrow">Clean it up</p>
+            <h2>Do you like your kids more than you like the ATO?</h2>
+            <p class="copy">Then get ahead of this before it is too late. We will not make it dramatic, but we also will not pretend it is nothing. If your number made you pause, let’s talk about whether it can be cleaned up.</p>
+            <div class="callouts">
+              <div class="callout"><strong>Clear, practical next steps</strong>We help you understand what is exposed and what may be worth reviewing.</div>
+              <div class="callout"><strong>No frighteners</strong>Just a straight conversation about your super, your kids and your options.</div>
+              <div class="callout"><strong>Clean it up where possible</strong>There may be strategies to reduce a significant amount of this over time.</div>
+            </div>
+          </div>
+          <form id="leadForm">
+            <div class="form-grid">
+              <label class="full"><span>Full name</span><input class="field" name="name" required placeholder="Your name"></label>
+              <label><span>Email</span><input class="field" name="email" type="email" required placeholder="you@email.com"></label>
+              <label><span>Phone</span><input class="field" name="phone" required placeholder="0400 000 000"></label>
+              <label><span>Date of birth</span><input class="field" name="dob" id="dob" type="date" required></label>
+              <div class="qualifier full" id="retirementQualifier">
+                <label><span>Have you retired or ceased employment?</span></label>
+                <div class="choice-row">
+                  <label class="choice"><input type="radio" name="retired_status" value="retired">Yes, retired / ceased employment</label>
+                  <label class="choice"><input type="radio" name="retired_status" value="working">No, still working</label>
+                </div>
+              </div>
+              <div class="eligibility-message full" id="eligibilityMessage" role="status" aria-live="polite"></div>
+              <label class="full"><span>Residential address</span><input class="field" name="address" id="address" autocomplete="street-address" placeholder="Start typing your residential address"></label>
+              <label class="full"><span>How can we help?</span><textarea class="field" name="message" placeholder="I’d like to know whether this can be cleaned up for my family. Please get in touch."></textarea></label>
+            </div>
+            <button class="btn" style="width:100%;margin-top:20px" type="submit">Let’s chat about cleaning this up</button>
+            <p class="fine disclaimer">By submitting this form, you agree to be contacted by ACru Wealth Financial Advisory. This page contains general information only and does not consider your personal objectives, financial situation or needs.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-box">
+        <div class="brand-lockup">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 86 110" role="img" focusable="false">
+              <path d="M27 6V67C27 82 35 90 45 91" fill="none" stroke="#7B9284" stroke-width="7" stroke-linecap="square"/>
+              <path d="M60 6V67C60 92 47 104 25 104" fill="none" stroke="#7B9284" stroke-width="7" stroke-linecap="square"/>
+            </svg>
+          </span>
+          <div class="brand-text">
+            <strong>ACRU WEALTH</strong>
+            <span>Financial Advisory</span>
+          </div>
+        </div>
+        <p class="footer-note">This page is general information only and does not consider your personal objectives, financial situation or needs. ACru Wealth can help you understand what applies to your family before you make a decision.</p>
+      </div>
+    </div>
+  </footer>
+  <a class="btn sticky" href="#calculator">Check your super now</a>
+  <script>
+    const money = new Intl.NumberFormat('en-AU', {style:'currency',currency:'AUD',maximumFractionDigits:0});
+    const taxableEl = document.getElementById('taxable');
+    const taxableRange = document.getElementById('taxableRange');
+    const trustToggle = document.getElementById('trustToggle');
+    const dobEl = document.getElementById('dob');
+    const addressEl = document.getElementById('address');
+    const retirementQualifier = document.getElementById('retirementQualifier');
+    const eligibilityMessage = document.getElementById('eligibilityMessage');
+    const eligibleAutoReplyFrom = 'danacrubud@gmail.com';
+    const superReportsGuideUrl = 'https://static1.squarespace.com/static/6279e3c01213e67657bd991b/t/69a78d76fefc1f7cfc464454/1772588406638/MyGov+Super+Reports+-+How-To+Guide.pdf';
+    const googleMapsApiKey = '';
+    const leadSubmitEndpoint = '';
+    window.initAcruAddressAutocomplete = function() {
+      if (!addressEl || !window.google?.maps?.places) return;
+      const autocomplete = new google.maps.places.Autocomplete(addressEl, {
+        componentRestrictions: {country: 'au'},
+        fields: ['formatted_address', 'address_components', 'geometry'],
+        types: ['address']
+      });
+      autocomplete.addListener('place_changed', function() {
+        const place = autocomplete.getPlace();
+        if (place.formatted_address) addressEl.value = place.formatted_address;
+      });
+    };
+    function loadGoogleMapsAutocomplete() {
+      if (!googleMapsApiKey) {
+        console.info('Add a Google Maps JavaScript API key with Places enabled to googleMapsApiKey to activate address autocomplete.');
+        return;
+      }
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(googleMapsApiKey)}&libraries=places&callback=initAcruAddressAutocomplete`;
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
+    }
+    function parseMoney(v) { return Number(String(v || '').replace(/[^0-9.]/g,'')) || 0; }
+    function formatInputMoney(value) { return new Intl.NumberFormat('en-AU', {maximumFractionDigits:0}).format(value); }
+    function hasCompleteDob(dobValue) {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(dobValue || '')) return false;
+      const year = Number(dobValue.slice(0, 4));
+      const currentYear = new Date().getFullYear();
+      return year >= 1900 && year <= currentYear;
+    }
+    function calculateAge(dobValue) {
+      if (!hasCompleteDob(dobValue)) return null;
+      const dob = new Date(`${dobValue}T00:00:00`);
+      if (Number.isNaN(dob.getTime())) return null;
+      const today = new Date();
+      let age = today.getFullYear() - dob.getFullYear();
+      const monthDiff = today.getMonth() - dob.getMonth();
+      if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) age -= 1;
+      return age;
+    }
+    function setEligibilityMessage(type, message) {
+      eligibilityMessage.className = `eligibility-message show ${type}`;
+      eligibilityMessage.textContent = message;
+    }
+    function clearEligibilityMessage() {
+      eligibilityMessage.className = 'eligibility-message';
+      eligibilityMessage.textContent = '';
+    }
+    function getRetiredStatus() {
+      const selected = document.querySelector('input[name="retired_status"]:checked');
+      return selected ? selected.value : '';
+    }
+    function updateRetirementQualifier() {
+      const age = calculateAge(dobEl.value);
+      retirementQualifier.classList.remove('show');
+      if (age !== null && age >= 60 && age < 65) retirementQualifier.classList.add('show');
+      return age;
+    }
+    function evaluateEligibility(showMessage = false) {
+      const age = updateRetirementQualifier();
+      clearEligibilityMessage();
+      if (age === null) {
+        if (showMessage) setEligibilityMessage('warn', 'Thank you for lodging your contact details. We will still need your full date of birth before we can check whether this strategy may be available.');
+        return {eligible:false, reason:'missing-dob'};
+      }
+      if (age < 60) {
+        if (showMessage) setEligibilityMessage('warn', 'Thank you for lodging your contact details. Based on the age entered, this specific death tax clean-up strategy may not be available yet because it is generally designed for people aged 60 or older. ACru Wealth may still be able to help with other advice needs.');
+        return {eligible:false, reason:'under-60'};
+      }
+      if (age >= 75) {
+        if (showMessage) setEligibilityMessage('warn', 'Thank you for lodging your contact details. Based on the age entered, this specific death tax clean-up strategy may not be available because past age 75, you can no longer make standard contributions into super. The exception may be if you are considering selling your home and may be eligible for downsizer contributions after owning your principal place of residence for more than 10 years. ACru Wealth may still be able to help with other advice needs.');
+        return {eligible:false, reason:'75-plus'};
+      }
+      if (age >= 60 && age < 65) {
+        const retiredStatus = getRetiredStatus();
+        if (!retiredStatus) {
+          if (showMessage) setEligibilityMessage('warn', 'Thank you for lodging your contact details. Because you are between 60 and 65, we will need to confirm whether you have retired or ceased employment before we can check whether this strategy may be available.');
+          return {eligible:false, reason:'retirement-needed'};
+        }
+        if (retiredStatus === 'working') {
+          if (showMessage) setEligibilityMessage('warn', 'Thank you for lodging your contact details. Based on what you entered, this specific strategy may not be available right now. Between 60 and 65, you generally need to have retired or ceased employment to access super for this type of strategy. Otherwise, you usually need to be 65 or older. ACru Wealth may still be able to help with other advice needs.');
+          return {eligible:false, reason:'still-working'};
+        }
+      }
+      if (showMessage) setEligibilityMessage('ok', 'Thank you for lodging your contact details. A team member will get in touch with you in the next day or two. Based on the age details entered, you may be eligible to have a conversation about this strategy. We will still need to confirm caps, timing and suitability.');
+      return {eligible:true, reason:'eligible'};
+    }
+    function buildEligibleAutoReply(toEmail) {
+      return {
+        from: eligibleAutoReplyFrom,
+        to: toEmail,
+        subject: 'Thank you for getting in touch with ACru Wealth',
+        body: [
+          'Thank you for getting in touch. A team member will get in touch with you in the next day or two.',
+          '',
+          'In order to do this, we will need certain information from you:',
+          '',
+          '1. The most recent super statement. That will outline taxable and tax-free components as well as your super contribution caps, which are found on the ATO portal via myGov.',
+          '',
+          '2. Please see below a link to a how-to guide to access the documents we would need to correctly clean up the tax for you and your family, or you and your beneficiaries.',
+          '',
+          superReportsGuideUrl
+        ].join('\n')
+      };
+    }
+    function collectLeadPayload(form, eligibility) {
+      const lead = Object.fromEntries(new FormData(form).entries());
+      const payload = {
+        lead,
+        eligibility,
+        calculator: {
+          taxableComponent: parseMoney(taxableEl.value),
+          estimateRate: trustToggle.checked ? 17 : 15,
+          estimatedDeathTax: parseMoney(document.getElementById('mainTax').textContent),
+          testamentaryTrustWill: trustToggle.checked
+        },
+        eligibleAutoReply: eligibility.eligible ? buildEligibleAutoReply(lead.email) : null
+      };
+      window.acruLastLeadSubmission = payload;
+      return payload;
+    }
+    async function submitLeadPayload(payload) {
+      if (!leadSubmitEndpoint) {
+        console.info('Add your Supabase Edge Function URL to leadSubmitEndpoint to store leads and trigger email automation.');
+        return {ok:true, skipped:true};
+      }
+      const response = await fetch(leadSubmitEndpoint, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(payload)
+      });
+      if (!response.ok) {
+        const message = await response.text();
+        throw new Error(message || 'Lead submission failed');
+      }
+      return response.json().catch(() => ({ok:true}));
+    }
+    function getEligibilityNote(eligibility) {
+      if (eligibility.eligible) return 'Based on the age details entered, you may be eligible to have a conversation about this strategy. We will still need to confirm caps, timing and suitability.';
+      if (eligibility.reason === 'under-60') return 'Based on the age entered, this specific death tax clean-up strategy may not be available yet because it is generally designed for people aged 60 or older. ACru Wealth may still be able to help with other advice needs.';
+      if (eligibility.reason === '75-plus') return 'Based on the age entered, this specific death tax clean-up strategy may not be available because past age 75, you can no longer make standard contributions into super. The exception may be if you are considering selling your home and may be eligible for downsizer contributions after owning your principal place of residence for more than 10 years. ACru Wealth may still be able to help with other advice needs.';
+      if (eligibility.reason === 'retirement-needed') return 'Because you are between 60 and 65, we will need to confirm whether you have retired or ceased employment before we can check whether this strategy may be available.';
+      if (eligibility.reason === 'still-working') return 'Based on what you entered, this specific strategy may not be available right now. Between 60 and 65, you generally need to have retired or ceased employment to access super for this type of strategy. Otherwise, you usually need to be 65 or older. ACru Wealth may still be able to help with other advice needs.';
+      return 'We will review the details you entered and come back to you about what may be possible.';
+    }
+    function renderSubmissionResult(form, eligibility) {
+      const noteClass = eligibility.eligible ? '' : ' warn';
+      form.classList.add('submission-success');
+      form.innerHTML = `
+        <div class="success-panel" role="status" aria-live="polite">
+          <div class="success-icon" aria-hidden="true">✓</div>
+          <h3>Thank you for getting in touch.</h3>
+          <p>A team member will get in touch with you in the next day or two.</p>
+          <div class="status-note${noteClass}">${getEligibilityNote(eligibility)}</div>
+        </div>
+      `;
+    }
+    function clampToRange(value) {
+      const min = Number(taxableRange.min);
+      const max = Number(taxableRange.max);
+      return Math.max(min, Math.min(max, value));
+    }
+    function paintRange() {
+      const min = Number(taxableRange.min);
+      const max = Number(taxableRange.max);
+      const pct = ((Number(taxableRange.value) - min) / (max - min)) * 100;
+      taxableRange.style.setProperty('--fill', `${pct}%`);
+    }
+    function calculate() {
+      const taxable = parseMoney(taxableEl.value);
+      const rate = trustToggle.checked ? 0.17 : 0.15;
+      const selected = taxable * rate;
+      const cleanCap = trustToggle.checked ? 66300 : 58500;
+      const cleanable = Math.min(selected, cleanCap);
+      document.getElementById('mainTax').textContent = money.format(selected);
+      document.getElementById('mainTaxCopy').textContent = `Estimated at ${Math.round(rate * 100)}% of the taxable component entered.`;
+      const rangePct = Math.min(100, (taxable / Number(taxableRange.max)) * 100);
+      document.getElementById('impactFill').style.width = `${Math.max(6, rangePct)}%`;
+      document.getElementById('cleanAmount').textContent = money.format(cleanable);
+      document.getElementById('cleanCopy').textContent = cleanable < selected
+        ? `Potential death tax savings this financial year, capped at ${money.format(cleanCap)} for the ${Math.round(rate * 100)}% estimate.`
+        : 'Potentially the full death tax issue shown above could be cleaned up this financial year.';
+      document.getElementById('cleanNote').textContent = `This is based on the ${Math.round(rate * 100)}% estimate and capped at ${money.format(cleanCap)} (${Math.round(rate * 100)}% of the available strategy amount), subject to available non-concessional caps, eligibility, timing and strategy suitability.`;
+      paintRange();
+    }
+    taxableEl.addEventListener('input', function() {
+      taxableRange.value = clampToRange(parseMoney(taxableEl.value));
+      calculate();
+    });
+    taxableEl.addEventListener('blur', function() {
+      taxableEl.value = formatInputMoney(parseMoney(taxableEl.value));
+      calculate();
+    });
+    taxableRange.addEventListener('input', function() {
+      taxableEl.value = formatInputMoney(Number(taxableRange.value));
+      calculate();
+    });
+    trustToggle.addEventListener('change', calculate);
+    dobEl.addEventListener('input', () => {
+      clearEligibilityMessage();
+      updateRetirementQualifier();
+    });
+    document.querySelectorAll('input[name="retired_status"]').forEach((radio) => {
+      radio.addEventListener('change', clearEligibilityMessage);
+    });
+    document.querySelectorAll('[data-taxable]').forEach((button) => {
+      button.addEventListener('click', function() {
+        taxableEl.value = formatInputMoney(Number(button.dataset.taxable));
+        taxableRange.value = clampToRange(Number(button.dataset.taxable));
+        calculate();
+      });
+    });
+    calculate();
+    taxableEl.value = formatInputMoney(parseMoney(taxableEl.value));
+    loadGoogleMapsAutocomplete();
+    document.getElementById('leadForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const submitButton = this.querySelector('button[type="submit"]');
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Submitting...';
+      }
+      const eligibility = evaluateEligibility(false);
+      const payload = collectLeadPayload(this, eligibility);
+      try {
+        await submitLeadPayload(payload);
+        renderSubmissionResult(this, eligibility);
+        console.info('ACru lead submission payload:', payload);
+      } catch (error) {
+        console.error('ACru lead submission failed:', error);
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = 'Let’s chat about cleaning this up';
+        }
+        setEligibilityMessage('warn', 'Sorry, something went wrong while lodging your details. Please try again or contact ACru Wealth directly.');
+      }
+    });
+  </script>
+</body>
+</html>
