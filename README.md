@@ -1,1 +1,20 @@
-# acru-super-death-tax-landing-page
+# ACru Wealth Super Death Tax Landing Page
+
+This package contains the ACru Wealth super death tax landing page, social media hook images, and Supabase-ready backend files.
+
+## Main files
+
+- `acru-super-death-tax-landing-page-v3.html` - landing page HTML
+- `assets/retiree-family-beach-hero.png` - landing page hero image
+- `assets/social-hooks/` - generated social media post options
+- `supabase/schema.sql` - Supabase table setup
+- `supabase/functions/acru-lead-submit/` - Supabase Edge Function for lead capture and automated email flow
+
+## Setup notes
+
+The landing page has placeholders that need to be configured before going live:
+
+- `googleMapsApiKey` - Google Maps Places API key for residential address autocomplete
+- `leadSubmitEndpoint` - deployed Supabase Edge Function URL for form submission
+
+The Edge Function README contains the Supabase and email setup notes.# acru-super-death-tax-landing-page
